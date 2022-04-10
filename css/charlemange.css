@@ -1,0 +1,49 @@
+html {
+  height: 100%; }
+
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-flow: column; }
+
+main {
+  flex: 1 1 auto;
+  background-image: linear-gradient(gray, silver); }
+  main img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 10%; }
+
+h1 {
+  color: black;
+  text-align: center; }
+
+a {
+  display: block;
+  width: 25%;
+  margin: auto;
+  margin-bottom: 1em;
+  padding: 0.25em;
+  border-radius: 0.5em;
+  border: solid 2px white;
+  color: white;
+  background: black;
+  font-size: x-large;
+  text-align: center;
+  text-decoration: none; }
+
+@media only screen and (orientation: portrait) {
+  h1 {
+    font-size: xxx-large; }
+
+  a {
+    font-size: xxx-large;
+    min-width: 75%; }
+
+  main img {
+    width: 50%; } }
+
+/*# sourceMappingURL=index.css.map */

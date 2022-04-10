@@ -1,0 +1,46 @@
+---
+extensions:
+- jpg
+- png
+- jpeg
+---
+{% include base.html %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="{{ base }}/css/{{ page.slug }}.css">
+</head>
+
+<body>
+  <header>
+    {% for ext in layout.extensions %}
+    {% capture imagepath %}/banners/{{ page.slug }}.{{ ext }}{% endcapture %}
+    {% capture header %}{% file_exists {{ imagepath }} %}{% endcapture %}
+    {% if header == "true" %}
+    <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
+    {% endif %}
+    {% endfor %}
+  </header>
+  <main>
+    {% for ext in layout.extensions %}
+    {% capture imagepath %}/profiles/{{ page.slug }}.{{ ext }}{% endcapture %}
+    {% capture header %}{% file_exists {{ imagepath }} %}{% endcapture %}
+    {% if header == "true" %}
+    <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
+    {% endif %}
+    {% endfor %}
+
+    <h1>{{ page.title }}</h1>
+
+    {% for link in page.links %}
+    <a href="{{ link.link }}">{{ link.name }}</a>
+    {% endfor %}
+
+    <a href="{{ base }}">Find My Frens Home</a>
+
+  </main>
+</body>
+
+</html>

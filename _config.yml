@@ -1,0 +1,14 @@
+# Permalinks
+permalink: pretty
+
+# Setup
+title: Find My Frens
+tagline: "Keep track of all the ways to find your frens"
+description: "Keep track of all the ways to find your frens"
+url: http://findmyfrens.net
+baseurl: ""
+
+collections:
+  frens:
+    output: true
+    permalink: "/:name"
