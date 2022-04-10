@@ -11,4 +11,4 @@ baseurl: ""
 collections:
   frens:
     output: true
-    permalink: "/:name"
+    permalink: ":name/"

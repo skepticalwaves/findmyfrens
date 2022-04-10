@@ -16,20 +16,22 @@ extensions:
 <body>
   <header>
     {% for ext in layout.extensions %}
-    {% capture imagepath %}/banners/{{ page.slug }}.{{ ext }}{% endcapture %}
-    {% capture header %}{% file_exists {{ imagepath }} %}{% endcapture %}
-    {% if header == "true" %}
-    <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
-    {% endif %}
+      {% capture imagepath %}/banners/{{ page.slug }}.{{ ext }}{% endcapture %}
+      {% for static_file in site.static_files %}
+        {% if static_file.path == imagepath %}
+          <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
+        {% endif %}
+      {% endfor %}
     {% endfor %}
   </header>
   <main>
     {% for ext in layout.extensions %}
-    {% capture imagepath %}/profiles/{{ page.slug }}.{{ ext }}{% endcapture %}
-    {% capture header %}{% file_exists {{ imagepath }} %}{% endcapture %}
-    {% if header == "true" %}
-    <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
-    {% endif %}
+      {% capture imagepath %}/profiles/{{ page.slug }}.{{ ext }}{% endcapture %}
+      {% for static_file in site.static_files %}
+        {% if static_file.path == imagepath %}
+          <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
+        {% endif %}
+      {% endfor %}
     {% endfor %}
 
     <h1>{{ page.title }}</h1>
