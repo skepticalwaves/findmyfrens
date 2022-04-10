@@ -5,8 +5,8 @@ permalink: pretty
 title: Find My Frens
 tagline: "Keep track of all the ways to find your frens"
 description: "Keep track of all the ways to find your frens"
-url: http://findmyfrens.net
-baseurl: ""
+url: https://skepticalwaves.github.io
+baseurl: "/findmyfrens"
 
 collections:
   frens:
