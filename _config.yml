@@ -5,7 +5,9 @@ permalink: pretty
 title: Find My Frens
 tagline: "Keep track of all the ways to find your frens"
 description: "Keep track of all the ways to find your frens"
+#For a real github pages with a CNAME this would be the real URL
 url: https://skepticalwaves.github.io
+#For a real github pages with a CNAME this would be empty
 baseurl: "/findmyfrens"
 
 collections:
