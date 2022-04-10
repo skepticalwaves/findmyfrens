@@ -4,5 +4,5 @@ title: Find My Frens
 ---
 
 {% for fren in site.frens %}
-<a href="{{ fren.url }}">{{ fren.title }}</a>
+<a href="{{ site.baseurl }}{{ fren.url }}">{{ fren.title }}</a>
 {% endfor %}

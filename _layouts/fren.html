@@ -4,13 +4,12 @@ extensions:
 - png
 - jpeg
 ---
-{% include base.html %}
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="{{ base }}/css/{{ page.slug }}.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ page.slug }}.css">
 </head>
 
 <body>
@@ -19,7 +18,7 @@ extensions:
       {% capture imagepath %}/banners/{{ page.slug }}.{{ ext }}{% endcapture %}
       {% for static_file in site.static_files %}
         {% if static_file.path == imagepath %}
-          <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
+          <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title }}">
         {% endif %}
       {% endfor %}
     {% endfor %}
@@ -29,7 +28,7 @@ extensions:
       {% capture imagepath %}/profiles/{{ page.slug }}.{{ ext }}{% endcapture %}
       {% for static_file in site.static_files %}
         {% if static_file.path == imagepath %}
-          <img src="{{ base }}{{ imagepath }}" alt="{{ page.title }}">
+          <img src="{{ site.baseurl }}{{ imagepath }}" alt="{{ page.title }}">
         {% endif %}
       {% endfor %}
     {% endfor %}
@@ -40,7 +39,7 @@ extensions:
     <a href="{{ link.link }}">{{ link.name }}</a>
     {% endfor %}
 
-    <a href="{{ base }}">Find My Frens Home</a>
+    <a href="{{ site.baseurl }}">Find My Frens Home</a>
 
   </main>
 </body>
